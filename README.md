@@ -1,6 +1,6 @@
 # 6.3_MySQL_Aleksandr_Molokov
 
-Задание 1
+ЗАДАНИЕ 1
 
 Развертывание MySQL 8.0 
 
@@ -55,6 +55,71 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
 Количество записей с price > 300
 
 ![6 3 Задание 1 price 300](https://user-images.githubusercontent.com/109212419/204895497-8afbb500-24a7-48fb-915f-f60d45e788ee.jpg)
+
+
+ЗАДАНИЕ 2
+
+Создание пользователя test с паролем test-pass
+
+    CREATE USER 'test'@'localhost' 
+    IDENTIFIED WITH mysql_native_password BY 'test-pass'
+    WITH MAX_CONNECTIONS_PER_HOUR 100
+    PASSWORD EXPIRE INTERVAL 180 DAY
+    FAILED_LOGIN_ATTEMPTS 3 PASSWORD_LOCK_TIME 2
+    ATTRIBUTE '{"first_name":"James", "last_name":"Pretty"}';
+    
+    ![Создание пользователя](https://user-images.githubusercontent.com/109212419/205141915-3ce9b323-c6ba-458c-bb22-989d3badd279.jpg)
+    
+    Предоставление привилегий пользователю test на базу
+    
+    mysql> GRANT SELECT ON amolokov_db.* to 'test'@'localhost';
+    
+    ![предоставление прав на базу](https://user-images.githubusercontent.com/109212419/205142678-89f1ce52-6ca5-44e7-9540-1a7ac2091fdd.jpg)
+    
+    Данные по пользоввателю
+    
+    mysql> SELECT * from INFORMATION_SCHEMA.USER_ATTRIBUTES where USER = 'test';
+    
+   ![данные по пользователю](https://user-images.githubusercontent.com/109212419/205143233-ffb5aab1-82f0-4086-a483-354800ca83f9.jpg)
+ 
+
+    ЗАДАНИЕ 3
+    
+    Установка профилирования и вывод команд
+    
+    SHOW PROFILE - отображение последних команд отправленных на сервер
+       
+    ![установка профилирования и вывод команд](https://user-images.githubusercontent.com/109212419/205145963-3458b0d1-b2a7-4000-8cb4-f87bc51b97a9.jpg)
+    
+    Поиск используемого в БД engin
+    
+    mysql> SELECT TABLE_NAME, ENGINE FROM information_schema.TABLES where TABLE_SCHEMA = 'amolokov_db';
+    
+    ![engin БД](https://user-images.githubusercontent.com/109212419/205146612-3d2d86be-df45-4ed0-aa82-e31605b10c27.jpg)
+    
+    Изменение engin в БД
+    
+    mysql> ALTER TABLE orders ENGINE = MyISAM;
+    
+    mysql> ALTER TABLE orders ENGINE = InnoDB;
+    
+    ![изменение engin БД](https://user-images.githubusercontent.com/109212419/205147279-7c5cec0c-f128-483e-8e1e-2bbb706c27e2.jpg)
+    
+    
+    ЗАДАНИЕ 4
+    
+    
+
+
+
+
+
+
+
+
+
+    
+
 
 
 
