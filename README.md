@@ -113,8 +113,19 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
     
     Файл my.cnf разположение etc/my.cnf
     
-    ![файл my cnf](https://user-images.githubusercontent.com/109212419/205154401-1f334ca5-e787-46ff-9ac1-d8e026663464.jpg)
-    ![файл my cnf](https://user-images.githubusercontent.com/109212419/205154507-d2e3e9fd-cf5b-422d-ae2a-65bdda785660.jpg)
+    ![файл my cnf](https://user-images.githubusercontent.com/109212419/205154710-592c2624-15ac-41f9-a822-7e3bba8f0ae7.jpg)
+    
+    Добавление данныхв файл my.cnf
+    
+    bash-4.4# cat adding_to_my.cnf >> my.cnf
+    
+    Файл с изменениями
+    
+    ![my cnf with changing](https://user-images.githubusercontent.com/109212419/205159834-d2d42293-01b7-47ec-879d-75701d39c5d9.jpg)
+
+    
+
+
 
 
 
