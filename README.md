@@ -111,4 +111,12 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
     
     ЗАДАНИЕ 4
     
+    Файл my.cnf разположение etc/my.cnf
+    
+    ![файл my cnf](https://user-images.githubusercontent.com/109212419/205154401-1f334ca5-e787-46ff-9ac1-d8e026663464.jpg)
+    ![файл my cnf](https://user-images.githubusercontent.com/109212419/205154507-d2e3e9fd-cf5b-422d-ae2a-65bdda785660.jpg)
+
+
+
+
     
