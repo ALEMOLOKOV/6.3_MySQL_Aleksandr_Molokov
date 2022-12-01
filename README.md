@@ -68,13 +68,14 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
     FAILED_LOGIN_ATTEMPTS 3 PASSWORD_LOCK_TIME 2
     ATTRIBUTE '{"first_name":"James", "last_name":"Pretty"}';
     
-    ![Создание пользователя](https://user-images.githubusercontent.com/109212419/205141915-3ce9b323-c6ba-458c-bb22-989d3badd279.jpg)
-    
+    ![Создание пользователя](https://user-images.githubusercontent.com/109212419/205152349-77e348c0-6102-4c00-a0b6-bb01ead005d4.jpg)
+
     Предоставление привилегий пользователю test на базу
     
     mysql> GRANT SELECT ON amolokov_db.* to 'test'@'localhost';
     
-    ![предоставление прав на базу](https://user-images.githubusercontent.com/109212419/205142678-89f1ce52-6ca5-44e7-9540-1a7ac2091fdd.jpg)
+    ![предоставление прав на базу](https://user-images.githubusercontent.com/109212419/205152451-e402988a-2708-488f-b5f9-a9cb1b36c401.jpg)
+
     
     Данные по пользоввателю
     
@@ -106,9 +107,7 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
     
     ![изменение engin БД](https://user-images.githubusercontent.com/109212419/205151569-8cc9d497-47f0-430d-9f5d-ec5de21111dc.jpg)
 
-   
-
-    
+       
     
     ЗАДАНИЕ 4
     
