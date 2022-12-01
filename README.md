@@ -88,47 +88,28 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
     Установка профилирования и вывод команд
     
     SHOW PROFILE - отображение последних команд отправленных на сервер
-       
-    ![установка профилирования и вывод команд](https://user-images.githubusercontent.com/109212419/205151038-e9348b01-1552-4f22-9f71-5cdc1325b675.jpg)
-
     
+    ![установка профилирования и вывод команд](https://user-images.githubusercontent.com/109212419/205151782-3dec4dac-3a32-4e88-be63-e6fde1539863.jpg)
+
     Поиск используемого в БД engin
     
     mysql> SELECT TABLE_NAME, ENGINE FROM information_schema.TABLES where TABLE_SCHEMA = 'amolokov_db';
     
-    ![engin БД](https://user-images.githubusercontent.com/109212419/205151068-6d28abba-3ddc-45ea-975e-685f6fda35ee.jpg)
+    ![engin БД](https://user-images.githubusercontent.com/109212419/205151653-99a94a6c-f8d5-4334-85cc-fd7d1d1bc2e0.jpg)
 
+    
     Изменение engin в БД
     
     mysql> ALTER TABLE orders ENGINE = MyISAM;
     
     mysql> ALTER TABLE orders ENGINE = InnoDB;
     
-    ![изменение engin БД](https://user-images.githubusercontent.com/109212419/205151147-805819b5-a529-4f7f-8b83-00bddeea0a15.jpg)
+    ![изменение engin БД](https://user-images.githubusercontent.com/109212419/205151569-8cc9d497-47f0-430d-9f5d-ec5de21111dc.jpg)
+
+   
 
     
     
     ЗАДАНИЕ 4
     
     
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
