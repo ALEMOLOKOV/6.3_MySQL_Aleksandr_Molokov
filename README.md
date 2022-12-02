@@ -50,14 +50,14 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
 
 ![6 3 Задание 1 Список таблиц](https://user-images.githubusercontent.com/109212419/204894895-1626f373-61ef-41fe-8dce-3b0c005ae17f.jpg)
 
-Количество записей с price > 300
+Количество записей с price > 300 (в базе только одна запись подходит под условие (2,'My little pony',500))
 
 ![6 3 Задание 1 price 300](https://user-images.githubusercontent.com/109212419/204895497-8afbb500-24a7-48fb-915f-f60d45e788ee.jpg)
 
 
 ЗАДАНИЕ 2
 
-Создание пользователя test с паролем test-pass
+Создание пользователя test с паролем test-pass (пришлось заходить под пользователем root, с паролем Hoax2z2a, amolokov ошибка прав доступа) 
 
     CREATE USER 'test'@'localhost' 
     IDENTIFIED WITH mysql_native_password BY 'test-pass'
@@ -111,11 +111,12 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
     
     ЗАДАНИЕ 4
     
-    Файл my.cnf разположение etc/my.cnf
+    Файл my.cnf разположение etc/my.cnf (файл my.cnf располагался в /etc/my.cnf)
     
    ![файл my cnf](https://user-images.githubusercontent.com/109212419/205154710-592c2624-15ac-41f9-a822-7e3bba8f0ae7.jpg)
     
-    Добавление данныхв файл my.cnf
+    Добавление данныхв файл my.cnf (создал файл adding_to_my.cnf, добавил в него параметры из ТЗ, далее записал их в файл my.cnf, 
+    пробовал открыть через nano и vim, ошибка команда не найдена)
     
     bash-4.4# cat adding_to_my.cnf >> my.cnf
     
