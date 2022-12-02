@@ -32,8 +32,6 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker-compose up -d
 vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:/var 
 
 
-
-
 Запуск командной строки в контейнере и восстановление БД из бэкапа
 
 ![6 3 Задание 1 развертывание mysql с восстановленной базой](https://user-images.githubusercontent.com/109212419/204371117-443cea71-5c46-4414-8262-b64145c656fd.jpg)
@@ -68,13 +66,15 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
     FAILED_LOGIN_ATTEMPTS 3 PASSWORD_LOCK_TIME 2
     ATTRIBUTE '{"first_name":"James", "last_name":"Pretty"}';
     
-    ![Создание пользователя](https://user-images.githubusercontent.com/109212419/205152349-77e348c0-6102-4c00-a0b6-bb01ead005d4.jpg)
+    
+   ![Создание пользователя](https://user-images.githubusercontent.com/109212419/205369068-09ae31d9-799d-462f-a347-771281f9a97a.jpg)
 
     Предоставление привилегий пользователю test на базу
     
     mysql> GRANT SELECT ON amolokov_db.* to 'test'@'localhost';
     
-    ![предоставление прав на базу](https://user-images.githubusercontent.com/109212419/205152451-e402988a-2708-488f-b5f9-a9cb1b36c401.jpg)
+    
+   ![предоставление прав на базу](https://user-images.githubusercontent.com/109212419/205369124-29225c6e-74b1-4379-b4d1-aaa739d77dd5.jpg)
 
     
     Данные по пользоввателю
@@ -90,13 +90,13 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
     
     SHOW PROFILE - отображение последних команд отправленных на сервер
     
-    ![установка профилирования и вывод команд](https://user-images.githubusercontent.com/109212419/205151782-3dec4dac-3a32-4e88-be63-e6fde1539863.jpg)
+   ![установка профилирования и вывод команд](https://user-images.githubusercontent.com/109212419/205151782-3dec4dac-3a32-4e88-be63-e6fde1539863.jpg)
 
     Поиск используемого в БД engin
     
     mysql> SELECT TABLE_NAME, ENGINE FROM information_schema.TABLES where TABLE_SCHEMA = 'amolokov_db';
     
-    ![engin БД](https://user-images.githubusercontent.com/109212419/205151653-99a94a6c-f8d5-4334-85cc-fd7d1d1bc2e0.jpg)
+   ![engin БД](https://user-images.githubusercontent.com/109212419/205151653-99a94a6c-f8d5-4334-85cc-fd7d1d1bc2e0.jpg)
 
     
     Изменение engin в БД
@@ -105,7 +105,7 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
     
     mysql> ALTER TABLE orders ENGINE = InnoDB;
     
-    ![изменение engin БД](https://user-images.githubusercontent.com/109212419/205151569-8cc9d497-47f0-430d-9f5d-ec5de21111dc.jpg)
+   ![изменение engin БД](https://user-images.githubusercontent.com/109212419/205151569-8cc9d497-47f0-430d-9f5d-ec5de21111dc.jpg)
 
        
     
@@ -113,7 +113,7 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
     
     Файл my.cnf разположение etc/my.cnf
     
-    ![файл my cnf](https://user-images.githubusercontent.com/109212419/205154710-592c2624-15ac-41f9-a822-7e3bba8f0ae7.jpg)
+   ![файл my cnf](https://user-images.githubusercontent.com/109212419/205154710-592c2624-15ac-41f9-a822-7e3bba8f0ae7.jpg)
     
     Добавление данныхв файл my.cnf
     
@@ -121,7 +121,7 @@ vagrant@vagrant:~/docker/volumes/mysql$ sudo docker cp test_dump.sql mysql_db_1:
     
     Файл с изменениями
     
-    ![my cnf with changing](https://user-images.githubusercontent.com/109212419/205159834-d2d42293-01b7-47ec-879d-75701d39c5d9.jpg)
+   ![my cnf with changing](https://user-images.githubusercontent.com/109212419/205159834-d2d42293-01b7-47ec-879d-75701d39c5d9.jpg)
 
     
 
